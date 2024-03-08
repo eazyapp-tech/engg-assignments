@@ -1,23 +1,28 @@
-# RentOk Android Issue Assignment
+# Task Assignment: Implement Dynamic App Icon Change in Android Application
 
-## Issue Summary
+## Objective
 
-We have identified a critical issue related to changing the app icon and name dynamically in the RentOk Manager Android application. This issue causes the package name to change to the activity alias, leading to failures in activity calls.
+Develop a simple Android application and add functionality to dynamically change the app icon without altering the package name. This feature enhancement aims to provide users with the flexibility to customize the app's appearance without affecting its core functionality.
 
-### Error Message
+## Feature Description
 
-Changing enabled activity-alias from default to net.eazypg.eazypgtenant.xyz
-android.content.ActivityNotFoundException: Unable to find explicit activity class {net.eazypg.eazypgtenant/com.cashfree.pg.core.api.ui.CFCoreUPIPaymentActivity}; have you declared this activity in your AndroidManifest.xml?
+Implement the following features in the Android application:
 
-### Steps to Reproduce
+1. **Simple Android Application:** Develop a basic Android application with minimal functionality.
+   
+2. **Dynamic App Icon Change:** Add the ability for users to dynamically change the app icon without modifying the package name. Users should be able to select from a predefined set of icons or upload their custom icons.
 
-1. Change the app icon and name based on the logged-in user.
-2. Observe the change in the package name to the activity alias.
-3. Attempt to perform an action using the Cashfree SDK, resulting in the mentioned error.
+## Task Details
 
-## Problem Analysis
+### Application Development
 
-The issue arises from dynamic changes in the app icon and name, leading to a modification in the package name to the activity alias. This alteration conflicts with the expectations of the Cashfree SDK, resulting in the inability to find the required activity (`CFCoreUPIPaymentActivity`), consequently causing the `ActivityNotFoundException`.
+1. **Basic Android Application:** Create a simple Android application with a clean user interface. The application should include at least one main activity.
+
+2. **Icon Selection Interface:** Develop an interface within the application that allows users to select the desired app icon. This interface should provide options for users to:
+   - Choose from a predefined set of icons.
+   - Upload custom icons from their device.
+
+3. **Dynamic Icon Implementation:** Integrate functionality to dynamically change the app icon based on the user's selection. Ensure that the app icon changes seamlessly without requiring a package name change.
 
 ### Code Reference
 
@@ -26,17 +31,32 @@ You can refer to the specific code causing the issue in the following file:
 
 If needed, you can also use the example app provided in this repository for reference: [flutter_dynamic_icon](https://github.com/eazyapp-tech/flutter_dynamic_icon)
 
+### Flutter Package Reference
+
+To explore implementing dynamic app icon functionality, you may refer to the following Flutter package:
+
+- **flutter_dynamic_icon:** This package provides utilities to change the launcher icon dynamically in a Flutter application. You can explore this package for inspiration or leverage its features for your Android application development task.
+
+### Documentation
+
+1. **Build Instructions:** Provide clear instructions on how to build and run the Android application on various devices and emulators. Include any necessary dependencies or configurations.
+
+2. **Usage Guidelines:** Explain to users how they can utilize the dynamic app icon change feature within the application.
+
+### Submission Guidelines
+
+1. **Repository Creation:** Create a new repository on GitHub or GitLab to host your project.
+
+2. **Code Implementation:** Implement the specified features in the Android application codebase.
+
+3. **Repository Submission:** Share the repository link with us for evaluation.
+
+## Evaluation Criteria
+
+- **Functionality:** Ensure that the Android application functions as expected, allowing users to select and apply app icons dynamically.
+
 ## Additional Notes
 
-This issue primarily stems from the dynamic alteration of the package name conflicting with the Cashfree SDK's expectations. By carefully managing the package name change process and ensuring proper activity declaration, this issue can likely be mitigated effectively.
+- Feel free to use any third-party libraries or frameworks that facilitate the implementation of the required features.
+  
 
-## Submission Guidelines
-
-- Create a new repository on GitHub or GitLab to host your project.
-- Complete the technical task following the requirements outlined above.
-- Provide clear instructions on how to build and run the application.
-- Share the repository link with us for evaluation.
-
-Feel free to use any third-party libraries or frameworks you find appropriate to accomplish the task. Focus on demonstrating your ability to develop a robust and efficient Android application that effectively handles data-heavy operations and delivers an exceptional user experience. Good luck!
-
----
